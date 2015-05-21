@@ -46,9 +46,4 @@ public class Producto extends EntidadIdAutoLong {
         this.precio = precio;
     }
 
-
-    public static List<Producto> findAllProductos(){
-        List<Producto> productos = JPA.em().createQuery("SELECT P from Producto P",Producto.class).getResultList();
-        return productos;
-    }
 }
