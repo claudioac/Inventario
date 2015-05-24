@@ -22,7 +22,7 @@ public class Hello  {
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView index(){
-        ModelAndView mv = new ModelAndView("/index");
+        ModelAndView mv = new ModelAndView("index");
         List<Producto> productos = productoService.findAllProductos();
         mv.addObject("productos",productos);
         return mv;
