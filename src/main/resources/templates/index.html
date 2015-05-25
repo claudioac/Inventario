@@ -1,10 +1,12 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/main">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Document</title>
 </head>
 <body>
+<div layout:fragment="content">
 <p>Hello mundo por thymeleaf</p>
 <h2>Mis Productos</h2>
 <table>
@@ -17,5 +19,6 @@
         <td th:text="${producto.precio}"></td>
     </tr>
 </table>
+</div>
 </body>
 </html>

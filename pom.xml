@@ -3,13 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.claudio.common</groupId>
     <artifactId>ClaudioBoot</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -54,9 +51,12 @@
             <artifactId>postgresql</artifactId>
             <version>9.1-901-1.jdbc4</version>
         </dependency>
-
+        <!--Dependencia para crear un decorator para thymeleaf-->
+        <dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
+        </dependency>
     </dependencies>
-
     <!--Configuraciones para la ejecución por linea de comando-->
     <build>
         <plugins>
@@ -79,6 +79,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
